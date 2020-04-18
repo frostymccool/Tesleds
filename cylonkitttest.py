@@ -99,11 +99,11 @@ def whitepulse(updown=3):
 
 def splitin(side, center, delay, start, length, pulsewidth):
     leftstart = start
-    leftend = (start+length)/2
+    leftend = start+(length/2)
     rightstart = start+length
     rightend = leftend
     
-    left = 0
+    left = leftstart
     right = rightstart
     while left <= leftend+width:
 #        print("left: ",left, "right: ", right)
@@ -137,7 +137,7 @@ def splitin(side, center, delay, start, length, pulsewidth):
     
 def splitout(side, center, delay, start, length, pulsewidth):
     leftend = start
-    leftstart = (start+length)/2
+    leftstart = start+(length/2)
     rightend = start+length
     rightstart = leftend
     
